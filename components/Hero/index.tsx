@@ -1,29 +1,31 @@
-"use client";
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import styles from '../../styles/page.module.css';
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import styles from "../../styles/page.module.css";
-import React from "react";
+interface Category {
+  name: string;
+  url: string;
+}
 
-const Hero = () => {
-  const [categories, setCategories] = useState([]);
+const Hero: React.FC = () => {
+  const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/type")
+    fetch('https://pokeapi.co/api/v2/type')
       .then((response) => response.json())
       .then((data) => {
-        const categories = data.results.map((category) => category);
+        const categories: Category[] = data.results;
         setCategories(categories);
       })
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   const handleLinkClick = (categoryName: string) => {
-    localStorage.setItem("test", categoryName);
+    localStorage.setItem('test', categoryName);
   };
 
   const getRandomColor = () => {
-    const colors = ["#3498db", "#f1c40f", "#2ecc71"];
+    const colors = ['#3498db', '#f1c40f', '#2ecc71'];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
