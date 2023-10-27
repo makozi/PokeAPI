@@ -1,0 +1,110 @@
+ 
+.categoriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-items: center;  
+    margin: 50px;
+    margin-top: 70px;
+    padding: 12px;
+  }
+  
+  .card {
+    width: calc(16.666% - 20px);  
+    margin: 10px;
+    padding: 30px; 
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #ccc;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  .title {
+    margin-top: 90px;  
+    font-size: 29px; 
+    text-align: center;
+  }
+
+
+
+  .titleDetails{
+    margin-top: 40px;  
+    font-size: 25px; 
+    margin-left:70px;
+    margin-bottom:4px;
+    font-weight: bold;
+  }
+
+
+  .titlesubDetails{
+    margin-top: 10px;  
+    font-size: 25px; 
+    margin-left:70px;
+   
+  }
+
+  .abilitydetails{
+    margin-top: 5px;  
+    font-size: 25px; 
+    margin-left:70px;
+    margin-bottom:12px;
+  }
+
+
+
+  .input{
+    width: 80%;  
+  max-width: 300px;  
+  margin: 0 auto;  
+  margin-top: 40px;
+  display: block;  
+  padding: 10px; 
+  border: 1px solid #ccc;  
+  border-radius: 10px;  
+  box-sizing: border-box; 
+  }
+
+ 
+.paginationContainer {
+    text-align: center;  
+    margin: 20px 0;  
+    font-size: 20px;
+  }
+  
+  .paginationButton {
+    padding: 5px 10px;  
+    margin: 0 5px; 
+  }
+  
+  .currentPage {
+    font-weight: bold;  
+  }
+  
+  
+  .link {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 18px; 
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive CSS for small screens */
+  @media (max-width: 768px) {
+    .categoriesContainer {
+      justify-content: center;  
+    }
+  
+    .card {
+      width: calc(33.33% - 20px);  
+    }
+  }
+  
